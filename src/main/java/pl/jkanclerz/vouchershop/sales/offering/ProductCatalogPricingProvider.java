@@ -1,4 +1,4 @@
-package pl.jkanclerz.vouchershop.sales;
+package pl.jkanclerz.vouchershop.sales.offering;
 
 import pl.jkanclerz.vouchershop.catalog.Product;
 import pl.jkanclerz.vouchershop.catalog.ProductCatalog;

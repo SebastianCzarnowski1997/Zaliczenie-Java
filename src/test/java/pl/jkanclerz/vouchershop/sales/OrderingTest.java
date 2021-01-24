@@ -2,11 +2,10 @@ package pl.jkanclerz.vouchershop.sales;
 
 import org.junit.Before;
 import org.junit.Test;
-import pl.jkanclerz.vouchershop.catalog.ProductCatalog;
 import pl.jkanclerz.vouchershop.sales.basket.InMemoryBasketStorage;
 import pl.jkanclerz.vouchershop.sales.offering.Offer;
 import pl.jkanclerz.vouchershop.sales.offering.OfferMaker;
-import pl.jkanclerz.vouchershop.sales.offering.PricingProvider;
+import pl.jkanclerz.vouchershop.sales.offering.ProductCatalogPricingProvider;
 
 import java.math.BigDecimal;
 import java.util.UUID;
