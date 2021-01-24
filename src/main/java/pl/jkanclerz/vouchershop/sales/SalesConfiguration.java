@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import pl.jkanclerz.vouchershop.catalog.ProductCatalog;
 import pl.jkanclerz.vouchershop.sales.basket.InMemoryBasketStorage;
 import pl.jkanclerz.vouchershop.sales.offering.OfferMaker;
+import pl.jkanclerz.vouchershop.sales.offering.ProductCatalogPricingProvider;
 
 
 @Configuration
@@ -16,6 +17,11 @@ public class SalesConfiguration {
 
     @Bean
     CurrentCustomerContext customerContext() {
-        return new RandomCustomerContext();
+        return new AlwaysTheSameCustomerContext();
+    }
+
+    @Bean
+    OfferMaker offerMaker(ProductCatalog productCatalog) {
+        return new OfferMaker(new ProductCatalogPricingProvider(productCatalog));
     }
 }
