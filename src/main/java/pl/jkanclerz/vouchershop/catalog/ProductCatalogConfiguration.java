@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 @Configuration
 public class ProductCatalogConfiguration {
 
-    ProductCatalog myProductCatalog() {
+    public ProductCatalog myProductCatalog() {
         return new ProductCatalog(new HashMapProductStorage());
     }
 

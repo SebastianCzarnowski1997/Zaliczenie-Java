@@ -1,4 +1,4 @@
-package pl.jkanclerz.vouchershop.sales;
+package pl.jkanclerz.vouchershop.sales.basket;
 
 import pl.jkanclerz.vouchershop.catalog.Product;
 
@@ -14,6 +14,10 @@ public class Basket {
     public Basket() {
         this.products = new HashMap<>();
         this.productsQuantities = new HashMap<>();
+    }
+
+    public static Basket empty() {
+        return new Basket();
     }
 
     public boolean isEmpty() {

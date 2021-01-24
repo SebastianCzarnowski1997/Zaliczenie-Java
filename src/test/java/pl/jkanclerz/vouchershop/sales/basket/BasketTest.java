@@ -1,7 +1,8 @@
-package pl.jkanclerz.vouchershop.sales;
+package pl.jkanclerz.vouchershop.sales.basket;
 
 import org.junit.Test;
 import pl.jkanclerz.vouchershop.catalog.Product;
+
 
 import java.util.UUID;
 

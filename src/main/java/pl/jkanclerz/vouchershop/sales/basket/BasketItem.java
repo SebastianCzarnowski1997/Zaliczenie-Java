@@ -1,4 +1,4 @@
-package pl.jkanclerz.vouchershop.sales;
+package pl.jkanclerz.vouchershop.sales.basket;
 
 public class BasketItem {
     private final String productId;
