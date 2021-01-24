@@ -1,15 +1,27 @@
 package pl.jkanclerz.vouchershop.sales;
 
 public class PaymentDetails {
+
+    private final String paymentUrl;
+    private final String paymentId;
+    private final String reservationId;
+
+    public PaymentDetails(String paymentUrl, String paymentId, String reservationId) {
+
+        this.paymentUrl = paymentUrl;
+        this.paymentId = paymentId;
+        this.reservationId = reservationId;
+    }
+
     public String getPaymentUrl() {
-        return "";
+        return paymentUrl;
     }
 
     public String getPaymentId() {
-        return null;
+        return paymentId;
     }
 
     public String getReservationId() {
-        return null;
+        return reservationId;
     }
 }

@@ -11,8 +11,13 @@ import pl.jkanclerz.vouchershop.sales.offering.ProductCatalogPricingProvider;
 @Configuration
 public class SalesConfiguration {
     @Bean
-    SalesFacade salesFacade(CurrentCustomerContext customerContext, ProductCatalog productCatalog, OfferMaker offerMaker) {
-        return new SalesFacade(customerContext, new InMemoryBasketStorage(), productCatalog, offerMaker);
+    SalesFacade salesFacade(CurrentCustomerContext customerContext, ProductCatalog productCatalog, OfferMaker offerMaker, PaymentGateway paymentGateway) {
+        return new SalesFacade(customerContext, new InMemoryBasketStorage(), productCatalog, offerMaker, paymentGateway);
+    }
+
+    @Bean
+    PaymentGateway paymentGateway() {
+        return null;
     }
 
     @Bean
